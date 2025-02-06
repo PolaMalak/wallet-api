@@ -1,0 +1,19 @@
+# Dependencies
+/node_modules
+
+# Prisma
+/prisma/migrations
+/prisma/dev.db
+
+# Environment variables
+.env
+
+# Build files
+/dist
+
+# Logs
+*.log
+
+# IDE/Editor
+.vscode
+.idea
