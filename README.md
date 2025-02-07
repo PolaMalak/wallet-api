@@ -4,73 +4,75 @@ A wallet system API built with NestJS, Prisma, and SQLite.
 This API allows users to create accounts, manage wallet balances, and track transaction history and secured with JWT authentication.
 The project follows Domain-Driven Design principles and here it's structure
 
+```bash
 wallet-system/
 ├── src/
-│ ├── auth/
-│ │ ├── auth.module.ts
-│ │ ├── auth.service.ts
-│ │ ├── auth.controller.ts
-│ │ ├── dto/
-│ │ │ ├── index.ts
-│ │ │ ├── login.dto.ts
-│ │ │ ├── register.dto.ts
-│ │ ├── strategies/
-│ │ │ ├── jwt.strategy.ts
-│ │ ├── guards/
-│ │ │ ├── jwt-auth.guard.ts
-│ ├── user/
-│ │ ├── user.module.ts
-│ │ ├── user.service.ts
-│ │ ├── user.controller.ts
-│ │ ├── test/
-│ │ │ ├── user.service.spec.ts
-│ │ ├── dto/
-│ │ │ ├── index.ts
-│ │ │ ├── create-user.dto.ts
-│ │ ├── response/
-│ │ │ ├── index.ts
-│ │ │ ├── user.response.ts
-│ ├── wallet/
-│ │ ├── wallet.module.ts
-│ │ ├── wallet.service.ts
-│ │ ├── wallet.controller.ts
-│ │ ├── test/
-│ │ │ ├── wallet.service.spec.ts
-│ │ ├── dto/
-│ │ │ ├── index.ts
-│ │ │ ├── top-up.dto.ts
-│ │ │ ├── charge.dto.ts
-│ │ ├── response/
-│ │ │ ├── index.ts
-│ │ │ ├── wallet.response.ts
-│ ├── transaction/
-│ │ ├── transaction.module.ts
-│ │ ├── transaction.service.ts
-│ │ ├── transaction.controller.ts
-│ │ ├── decorator/
-│ │ │ ├── two-decimals-max.decorator.ts
-│ │ ├── test/
-│ │ │ ├── transaction.service.spec.ts
-│ │ ├── dto/
-│ │ │ ├── index.ts
-│ │ │ ├── create-transaction.dto.ts
-│ │ ├── enum/
-│ │ │ ├── index.ts
-│ │ │ ├── transaction-type.enum.ts
-│ ├── prisma/
-│ │ ├── prisma.service.ts
-│ │ ├── prisma.module.ts
-│ ├── main.ts
+│   ├── auth/
+│   │   ├── auth.module.ts
+│   │   ├── auth.service.ts
+│   │   ├── auth.controller.ts
+│   │   ├── dto/
+│   │   │   ├── index.ts
+│   │   │   ├── login.dto.ts
+│   │   │   └── register.dto.ts
+│   │   ├── strategies/
+│   │   │   └── jwt.strategy.ts
+│   │   ├── guards/
+│   │   │   └── jwt-auth.guard.ts
+│   ├── user/
+│   │   ├── user.module.ts
+│   │   ├── user.service.ts
+│   │   ├── user.controller.ts
+│   │   ├── test/
+│   │   │   └── user.service.spec.ts
+│   │   ├── dto/
+│   │   │   ├── index.ts
+│   │   │   └── create-user.dto.ts
+│   │   ├── response/
+│   │   │   ├── index.ts
+│   │   │   └── user.response.ts
+│   ├── wallet/
+│   │   ├── wallet.module.ts
+│   │   ├── wallet.service.ts
+│   │   ├── wallet.controller.ts
+│   │   ├── test/
+│   │   │   └── wallet.service.spec.ts
+│   │   ├── dto/
+│   │   │   ├── index.ts
+│   │   │   ├── top-up.dto.ts
+│   │   │   └── charge.dto.ts
+│   │   ├── response/
+│   │   │   ├── index.ts
+│   │   │   └── wallet.response.ts
+│   ├── transaction/
+│   │   ├── transaction.module.ts
+│   │   ├── transaction.service.ts
+│   │   ├── transaction.controller.ts
+│   │   ├── decorator/
+│   │   │   └── two-decimals-max.decorator.ts
+│   │   ├── test/
+│   │   │   └── transaction.service.spec.ts
+│   │   ├── dto/
+│   │   │   ├── index.ts
+│   │   │   └── create-transaction.dto.ts
+│   │   ├── enum/
+│   │   │   ├── index.ts
+│   │   │   └── transaction-type.enum.ts
+│   ├── prisma/
+│   │   ├── prisma.service.ts
+│   │   └── prisma.module.ts
+│   └── main.ts
 ├── prisma/
-│ ├── schema.prisma
-│ ├── migrations/
+│   ├── schema.prisma
+│   └── migrations/
 ├── .env-example
 ├── .gitignore
 ├── package.json
 ├── package-lock.json
 ├── README.md
 ├── nest-cli.json
-├── tsconfig.json
+└── tsconfig.json
+```
 
 ## 📌 Features
 
